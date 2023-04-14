@@ -23,5 +23,6 @@ public class Team extends BaseEntity {
 
     @OneToMany(mappedBy = "team")
     @JsonIgnore
+    @ToString.Exclude
     private List<Member> members = new ArrayList<>();
 }

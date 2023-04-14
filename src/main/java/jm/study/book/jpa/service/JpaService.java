@@ -7,6 +7,7 @@ import jm.study.book.jpa.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -18,9 +19,11 @@ public class JpaService {
     @Autowired
     private TeamRepository teamRepository;
 
+    @Transactional
     public void insertTeam(Team team){
         teamRepository.insertTeam(team);
     }
+    @Transactional
     public Team selectTeam(Long seq){
         return teamRepository.selectTeam(seq);
     }

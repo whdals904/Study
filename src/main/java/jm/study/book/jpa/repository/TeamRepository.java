@@ -6,7 +6,9 @@ import jm.study.book.jpa.entity.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.List;
 
 import static jm.study.book.jpa.entity.QTeam.team;
@@ -19,15 +21,15 @@ public class TeamRepository {
     @Autowired
     private EntityManager em;
 
+    @Transactional
     public void insertTeam(Team t) {
         em.persist(t);
-        System.out.println("t = " + t);
     }
-
+    @Transactional
     public Team selectTeam(Long seq){
         return em.find(Team.class,seq);
     }
-
+    @Transactional
     public List<Team> findAllTeam() {
         System.out.println("=================QUERY_DSL=====================");
 //        return query.selectFrom(member).fetch();
