@@ -1,7 +1,7 @@
-package jm.study.book.effectivejava.Item2_2;
+package jm.study.book.effectivejava.item2_2;
 
-import static jm.study.book.effectivejava.Item2_2.NyPizza.Size.*;
-import static jm.study.book.effectivejava.Item2_2.Pizza.Topping.*;
+import static jm.study.book.effectivejava.item2_2.NyPizza.Size.*;
+import static jm.study.book.effectivejava.item2_2.Pizza.Topping.*;
 
 public class Main {
 

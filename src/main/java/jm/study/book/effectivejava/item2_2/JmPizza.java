@@ -1,4 +1,4 @@
-package jm.study.book.effectivejava.Item2_2;
+package jm.study.book.effectivejava.item2_2;
 
 public class JmPizza extends Pizza{
 

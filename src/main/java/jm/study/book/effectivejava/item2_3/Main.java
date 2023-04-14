@@ -1,4 +1,4 @@
-package jm.study.book.effectivejava.Item2_3;
+package jm.study.book.effectivejava.item2_3;
 
 class Singleton1{
 

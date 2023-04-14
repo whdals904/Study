@@ -1,4 +1,4 @@
-package jm.study.book.effectivejava.Item2_2;
+package jm.study.book.effectivejava.item2_2;
 
 import java.util.Objects;
 
