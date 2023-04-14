@@ -40,9 +40,9 @@ public class MemberRepository {
 //        return query.selectFrom(member).fetch();
 //        return query.selectFrom(member).leftJoin(member.school,school).where(member.seq.gt(2)).fetch();
         return query.selectFrom(member)
-                .where(member.seq
-                        .gt(2))
+                .join(member.team)
                 .orderBy(member.seq.desc())
                 .fetch();
     }
+
 }
