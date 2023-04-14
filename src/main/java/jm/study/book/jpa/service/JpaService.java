@@ -19,13 +19,17 @@ public class JpaService {
     @Autowired
     private TeamRepository teamRepository;
 
-    @Transactional
+
     public void insertTeam(Team team){
         teamRepository.insertTeam(team);
     }
-    @Transactional
+
     public Team selectTeam(Long seq){
         return teamRepository.selectTeam(seq);
+    }
+
+    public Member selectMember(Long seq){
+        return memberRepository.selectMember(seq);
     }
 
     public List<Team> findAllTeam(){
