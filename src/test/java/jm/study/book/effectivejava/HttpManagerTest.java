@@ -128,8 +128,8 @@ public class HttpManagerTest {
         System.out.println("Naver = " + naver);
         System.out.println("testNaver = " + testNaver);
 
-        HttpComponentV6<Naver> HttpComponent = new HttpComponentV6().getInstance(naver);
-        HttpComponentV6<Naver> testHttpComponent = new HttpComponentV6().getInstance(testNaver);
+        HttpComponentV6<Naver> HttpComponent = new HttpComponentV6<Naver>().getInstance(naver);
+        HttpComponentV6<Naver> testHttpComponent = new HttpComponentV6<Naver>().getInstance(testNaver);
 
 
         System.out.println("hm = " + HttpComponent);
