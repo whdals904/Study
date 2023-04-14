@@ -13,7 +13,7 @@ import javax.persistence.*;
 
 
 @RequiredArgsConstructor
-public class MemberDto extends BaseEntity {
+public class MemberDto{
 
     private String name;
     private int age;

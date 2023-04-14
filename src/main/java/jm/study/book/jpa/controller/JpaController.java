@@ -1,6 +1,7 @@
 package jm.study.book.jpa.controller;
 
 import jm.study.book.jpa.dto.MemberDto;
+import jm.study.book.jpa.dto.TeamDto;
 import jm.study.book.jpa.entity.Member;
 import jm.study.book.jpa.entity.Team;
 import jm.study.book.jpa.service.JpaService;
@@ -26,12 +27,15 @@ public class JpaController {
 
 
 
-    @GetMapping("/select/team")
+    @GetMapping("/select/team/{seq}")
     @ResponseBody
     @Transactional
-    public Team selectTeam(Long seq){
+    public TeamDto selectTeam(@PathVariable("seq") Long seq){
 
-        return jpaService.selectTeam(1L);
+        Team t = jpaService.selectTeam(seq);
+        TeamDto td = new TeamDto(t);
+
+        return td;
     }
 
 
