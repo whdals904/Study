@@ -8,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class HttpManagerTest {
 
-
     @Test
     public void V1_same(){
         HttpManager hm = HttpManager.getHttpComponent(HttpManager.HttpMode.TEST);
