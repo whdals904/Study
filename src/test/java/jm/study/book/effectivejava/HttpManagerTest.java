@@ -109,8 +109,8 @@ public class HttpManagerTest {
         System.out.println("kakao = " + kakao);
         System.out.println("testKakao = " + testKakao);
 
-        HttpComponentV6<Kakao> HttpComponent = new HttpComponentV6().getInstance(kakao);
-        HttpComponentV6<Kakao> testHttpComponent = new HttpComponentV6().getInstance(testKakao);
+        HttpComponentV6<Kakao> HttpComponent = new HttpComponentV6<Kakao>().getInstance(kakao);
+        HttpComponentV6<Kakao> testHttpComponent = new HttpComponentV6<Kakao>().getInstance(testKakao);
 
 
         System.out.println("hm = " + HttpComponent);
