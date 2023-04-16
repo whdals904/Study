@@ -39,10 +39,14 @@ public class MemberRepository {
 
 //        return query.selectFrom(member).fetch();
 //        return query.selectFrom(member).leftJoin(member.school,school).where(member.seq.gt(2)).fetch();
-        return query.selectFrom(member)
-                .join(member.team)
-                .orderBy(member.seq.desc())
-                .fetch();
-    }
 
+        //queryDsl
+//        return query.selectFrom(member)
+//                .join(member.team)
+//                .orderBy(member.seq.desc())
+//                .fetch();
+
+        //fetch join
+        return em.createQuery("select m from Member m join fetch m.team", Member.class).getResultList();
+    }
 }
