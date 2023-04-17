@@ -71,8 +71,8 @@ public class HttpManagerTest {
         System.out.println("kakao = " + kakao);
         System.out.println("testKakao = " + testKakao);
 
-        HttpComponentV5<Kakao> hm = HttpComponentV5.getInstance(kakao);
-        HttpComponentV5<Kakao> hm1 = HttpComponentV5.getInstance(testKakao);
+        HttpComponentV5 hm = HttpComponentV5.getInstance(kakao);
+        HttpComponentV5 hm1 = HttpComponentV5.getInstance(testKakao);
 
         System.out.println("hm = " + hm);
         System.out.println("hm1 = " + hm1);
@@ -89,8 +89,8 @@ public class HttpManagerTest {
         System.out.println("Naver = " + naver);
         System.out.println("testNaver = " + testNaver);
 
-        HttpComponentV5<Naver> hm = HttpComponentV5.getInstance(naver);
-        HttpComponentV5<Naver> hm1 = HttpComponentV5.getInstance(testNaver);
+        HttpComponentV5 hm = HttpComponentV5.getInstance(naver);
+        HttpComponentV5 hm1 = HttpComponentV5.getInstance(testNaver);
 
         System.out.println("hm = " + hm);
         System.out.println("hm1 = " + hm1);

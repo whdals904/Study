@@ -5,12 +5,12 @@ import lombok.ToString;
 
 @ToString
 public class HttpComponentV5<T extends HttpUnit> {
-    private String common_aaa;
-    private String common_bbb;
+    private final String common_aaa;
+    private final String common_bbb;
 
-    private String aa;
-    private String bb;
-    private String cc;
+    private final String aa;
+    private final String bb;
+    private final String cc;
 
     private static HttpComponentV5 T_HTTP_COMPONENT;
     private static HttpComponentV5 P_HTTP_COMPONENT;
@@ -24,7 +24,7 @@ public class HttpComponentV5<T extends HttpUnit> {
         this.cc = a.getParamC();
     }
 
-    public static <K extends HttpUnit> HttpComponentV5<K> getInstance(K a){
+    public static <K extends HttpUnit> HttpComponentV5 getInstance(K a){
 
         if(a.getHttpMode().equals(HttpUnit.HttpModeEnum.TEST)){
             if(T_HTTP_COMPONENT == null){
