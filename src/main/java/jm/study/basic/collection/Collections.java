@@ -24,6 +24,7 @@ public class Collections {
         stack.remove(3);
         System.out.println("stack = " + stack);
 
+
         Stack<Integer> st = new Stack<Integer>();
         st.add(1);
         st.add(2);
@@ -31,8 +32,10 @@ public class Collections {
         st.add(4);
         st.add(5);
         System.out.println("st = " + st);
+        System.out.println("st.peek() = " + st.peek());
         st.pop();
         System.out.println("st = " + st);
+        System.out.println("st.peek() = " + st.peek());
 
 
     }
