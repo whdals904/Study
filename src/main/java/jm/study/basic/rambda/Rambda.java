@@ -1,4 +1,4 @@
-package jm.study.basic.collection;
+package jm.study.basic.rambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,6 +12,5 @@ public class Rambda {
         System.out.println("s5 = " + s5);
 
         s5.stream().filter(x->x.equals("aaa")).forEach(System.out::println);
-
     }
 }
