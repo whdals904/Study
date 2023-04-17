@@ -9,6 +9,12 @@ public class StudentDto {
     public String name;
     public int age;
 
+
+    public StudentDto(){
+        this.seq = -1L;
+        this.name ="no name";
+        this.age = -1;
+    }
     public StudentDto(Student student){
         this.seq = student.getSeq();
         this.name = student.getName();
@@ -31,4 +37,11 @@ public class StudentDto {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }

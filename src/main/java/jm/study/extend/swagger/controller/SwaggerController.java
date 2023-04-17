@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @RestController
 public class SwaggerController {
@@ -27,7 +28,7 @@ public class SwaggerController {
         s.setAge(40);
         em.persist(s);
 
-        Student student = em.find(Student.class, seq);
-        return new StudentDto(student);
+        Optional<Student> student = Optional.ofNullable(em.find(Student.class,999L));
+        return new StudentDto(student.orElseGet(Student::new));
     }
 }
