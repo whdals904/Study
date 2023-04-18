@@ -29,7 +29,7 @@ class Skating<T> extends Sport<T>{
     }
 }
 
-public class GenericMain<T> {
+public class GenericMain<T extends Sport> {
 
     public void test(List<T> list){
         System.out.println("list = " + list);
@@ -43,7 +43,7 @@ public class GenericMain<T> {
     public static void main(String[] args) {
         System.out.println("=============Generics Main !! ================");
 
-        GenericMain<Football> gm = new GenericMain();
+        GenericMain<Football> gm = new GenericMain<>();
         List<Football> lf = new ArrayList<>();
         List<Skating> sf = new ArrayList<>();
         gm.test(lf);

@@ -27,7 +27,7 @@ spring:
   ## JPA Setting Info
   jpa:
     hibernate:
-      ddl-auto: create  # option type: create, create-drop, update, validate, none
+      ddl-auto: create-drop  # option type: create, create-drop, update, validate, none
     properties:
       hibernate:
         diarect: org.hibernate.dialect.H2Dialect  # ??? ??? ?? ?????? ??? ?????.

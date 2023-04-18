@@ -2,7 +2,6 @@ package jm.study.program.jpa.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Controller;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -22,7 +21,8 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Member member;
-    
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItems> orderItems =  new ArrayList<OrderItems>();
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -31,6 +31,7 @@ public class Order {
 
     private LocalDateTime orderDate;
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
 
