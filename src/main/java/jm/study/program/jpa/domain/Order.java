@@ -20,10 +20,11 @@ public class Order {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="member_id")
     private Member member;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<OrderItems> orderItems =  new ArrayList<OrderItems>();
+    private List<OrderItem> orderItems =  new ArrayList<OrderItem>();
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="delivery_id")
@@ -33,6 +34,32 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+//
+//    public void changeMember(Member m){
+//        if(this.member == null){
+//            this.member = m;
+//        }
+//        this.member.getOrder().add(this);
+//    }
 
+    //==연관관계 메서드==//
+    public void setMember(Member member){
+        this.member = member;
+        member.getOrder().add(this);
+    }
+
+  /*  public void addOrderItems(OrderItem orderItem){
+        this.orderItems.add(orderItem);
+    }*/
+
+    public void addOrderItem(OrderItem orderItem){
+        this.orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+
+    public void setDelivery(Delivery delivery){
+        this.delivery = delivery;
+        this.delivery.setOrder(this);
+    }
 
 }

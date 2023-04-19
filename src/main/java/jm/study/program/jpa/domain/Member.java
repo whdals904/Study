@@ -1,6 +1,8 @@
 package jm.study.program.jpa.domain;
 
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -8,6 +10,7 @@ import java.util.List;
 
 
 @Entity
+@Getter
 public class Member {
 
     @Id
@@ -21,5 +24,6 @@ public class Member {
 
     @OneToMany(mappedBy = "member")
     private List<Order> order = new ArrayList<Order>();
+
 
 }
