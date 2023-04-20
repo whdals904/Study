@@ -29,7 +29,7 @@ class MemberRepositoryTest {
         m.setAddress(a);
 
         Long id = memberRepository.save(m);
-        Member findMember = memberRepository.find(id);
+        Member findMember = memberRepository.findOne(id);
 
         assertEquals(findMember.getId(),id);
         assertEquals(findMember,m);
@@ -38,14 +38,15 @@ class MemberRepositoryTest {
         m1.setName("김종윤");
         Address a1 = new Address("김포","김포한강8로","4300-5061");
         m1.setAddress(a1);
-
         a1.setCity("시애틀");
         
         //when
         Long id1 = memberRepository.save(m1);
-        Member findMember1 = memberRepository.find(id);
+        Member findMember1 = memberRepository.findOne(id1);
+
+        a1.setCity("시카고");
         //then
-        assertEquals(findMember1.getId(),id);
+        assertEquals(findMember1.getId(),id1);
         assertEquals(findMember1,m1);
 
     }
