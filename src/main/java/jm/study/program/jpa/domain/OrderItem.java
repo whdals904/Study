@@ -25,5 +25,4 @@ public class OrderItem {
     private String orderPrice;
     private int count;
 
-
 }

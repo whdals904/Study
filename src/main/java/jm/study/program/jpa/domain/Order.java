@@ -34,23 +34,12 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-//
-//    public void changeMember(Member m){
-//        if(this.member == null){
-//            this.member = m;
-//        }
-//        this.member.getOrder().add(this);
-//    }
 
     //==연관관계 메서드==//
     public void setMember(Member member){
         this.member = member;
         member.getOrder().add(this);
     }
-
-  /*  public void addOrderItems(OrderItem orderItem){
-        this.orderItems.add(orderItem);
-    }*/
 
     public void addOrderItem(OrderItem orderItem){
         this.orderItems.add(orderItem);
