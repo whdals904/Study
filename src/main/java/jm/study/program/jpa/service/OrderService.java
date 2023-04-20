@@ -4,11 +4,13 @@ import jm.study.program.jpa.domain.*;
 import jm.study.program.jpa.repository.ItemRepository;
 import jm.study.program.jpa.repository.MemberRepository;
 import jm.study.program.jpa.repository.OrderRepository;
+import jm.study.program.jpa.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -39,5 +41,10 @@ public class OrderService {
 
         Order order = orderRepository.findOne(orderId);
         order.cancel();
+    }
+
+    @Transactional
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
     }
 }

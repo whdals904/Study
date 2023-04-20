@@ -1,6 +1,7 @@
 package jm.study.program.jpa.domain;
 
 
+import jm.study.program.jpa.exceptions.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,7 +33,7 @@ public abstract class Item {
         stockQuantity+= count;
     }
     public void removeStock(int count){
-        if(stockQuantity - count > 0){
+        if(stockQuantity - count >= 0){
             stockQuantity -= count;
         }else{
             throw new NotEnoughStockException("need more stock");
