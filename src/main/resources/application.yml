@@ -7,6 +7,8 @@ spring:
       enabled: true
       # thymeleaf cache ????
   thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
     cache : false
   mvc:
     pathmatch:

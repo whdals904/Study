@@ -26,4 +26,16 @@ public abstract class Item {
 
     @ManyToMany(mappedBy = "items")
     public List<Category> categories = new ArrayList<Category>();
+
+    //==비즈니스 로직==//
+    public void addStock(int count){
+        stockQuantity+= count;
+    }
+    public void removeStock(int count){
+        if(stockQuantity - count > 0){
+            stockQuantity -= count;
+        }else{
+            throw new NotEnoughStockException("need more stock");
+        }
+    }
 }
