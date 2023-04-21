@@ -1,6 +1,6 @@
 package jm.study.program.jpa.service;
 
-import jm.study.program.jpa.domain.Item;
+import jm.study.program.jpa.domain.item.Item;
 import jm.study.program.jpa.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

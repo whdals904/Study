@@ -1,6 +1,7 @@
-package jm.study.program.jpa.domain;
+package jm.study.program.jpa.domain.item;
 
 
+import jm.study.program.jpa.domain.Category;
 import jm.study.program.jpa.exceptions.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,7 @@
 package jm.study.program.jpa.service;
 
 import jm.study.program.jpa.domain.*;
+import jm.study.program.jpa.domain.item.Item;
 import jm.study.program.jpa.repository.ItemRepository;
 import jm.study.program.jpa.repository.MemberRepository;
 import jm.study.program.jpa.repository.OrderRepository;

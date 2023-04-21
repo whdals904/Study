@@ -1,7 +1,7 @@
 package jm.study.program.jpa.controller;
 
 
-import jm.study.program.jpa.domain.Item;
+import jm.study.program.jpa.domain.item.Item;
 import jm.study.program.jpa.domain.Member;
 import jm.study.program.jpa.domain.Order;
 import jm.study.program.jpa.repository.OrderSearch;

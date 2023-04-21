@@ -1,14 +1,12 @@
 package jm.study.program.jpa.controller;
 
-import jm.study.program.jpa.domain.Item;
-import jm.study.program.jpa.domain.Book;
-import jm.study.program.jpa.domain.Member;
+import jm.study.program.jpa.domain.item.Item;
+import jm.study.program.jpa.domain.item.Book;
 import jm.study.program.jpa.service.ItemService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;

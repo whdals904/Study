@@ -1,5 +1,6 @@
 package jm.study.program.jpa.domain;
 
+import jm.study.program.jpa.domain.item.Item;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

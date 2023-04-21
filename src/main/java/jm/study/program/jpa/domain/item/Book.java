@@ -1,4 +1,4 @@
-package jm.study.program.jpa.domain;
+package jm.study.program.jpa.domain.item;
 
 import lombok.Getter;
 import lombok.Setter;
