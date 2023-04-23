@@ -36,6 +36,8 @@ public class ItemController {
         book.setStockQuantity(form.getStockQuantity());
         book.setAuthor(form.getAuthor());
         book.setIsbn(form.getIsbn());
+        book.setPage(form.getPage());
+
 
         itemService.saveItem(book);
         return "redirect:/";
@@ -57,6 +59,8 @@ public class ItemController {
         bookForm.setAuthor(book.getName());
         bookForm.setIsbn(book.getIsbn());
         bookForm.setPrice(book.getPrice());
+        bookForm.setPage(book.getPage());
+
         bookForm.setStockQuantity(book.getStockQuantity());
         bookForm.setName(book.getName());
         bookForm.setId(book.getId());
@@ -68,7 +72,7 @@ public class ItemController {
     @PostMapping("/items/{itemId}/edit")
     public String updateItem(@PathVariable Long itemId, @ModelAttribute("form") BookForm form) {
 
-        itemService.updateItem(itemId, form.getName(), form.getPrice(), form.getStockQuantity());
+        itemService.updateItem(itemId, form.getName(), form.getPrice(), form.getPage(), form.getStockQuantity());
 
         return "redirect:/items";
     }

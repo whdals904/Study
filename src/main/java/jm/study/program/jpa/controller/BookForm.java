@@ -15,4 +15,5 @@ public class BookForm {
 
     private String author;
     private String isbn;
+    private int page;
 }
