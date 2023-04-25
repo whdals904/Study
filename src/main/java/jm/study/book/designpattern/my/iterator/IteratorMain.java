@@ -9,7 +9,7 @@ abstract class Aggregate {
 abstract class Iterator{
 
     public abstract boolean hasNext();
-    public abstract Book next();
+    public abstract Object next();
 }
 
 @ToString
@@ -54,7 +54,7 @@ class BookShelfIterator extends Iterator{
     }
 
     @Override
-    public Book next() {
+    public Object next() {
         return bs.getBook();
     }
 }
@@ -64,12 +64,13 @@ public class IteratorMain {
         System.out.println("Iterator Main Start !!!!!!!!!!!!!!!");
         
         BookShelf bs = new BookShelf();
-        bs.addBook(new Book("한글"));
+        bs.addBook(new Book("논어"));
+        bs.addBook(new Book("맹자"));
         bs.addBook(new Book("주해"));
         bs.addBook(new Book("주용"));
         Iterator bsIterator =  bs.iterator();
         while(bsIterator.hasNext()){
-            System.out.println("bsIterator.next() = " + bsIterator.next());
+            System.out.println("bsIterator.next() = " + (Book) bsIterator.next());
         }
     }
 }
