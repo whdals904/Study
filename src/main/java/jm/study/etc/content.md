@@ -10,3 +10,7 @@ Link: [naver][naver]
 =============
 Link: [IntelliJ_단축키][IntelliJ_단축키]
 [IntelliJ_단축키]: ./IntelliJ_단축키
+
+
+얕은복사 vs 깊은복사
+https://kimeuncheol.tistory.com/98
