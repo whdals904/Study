@@ -21,11 +21,11 @@ public class Problem03_5 {
         Integer count =0;
         //todo
 
-        int number = 8; //1<= n <= 100,000
-        int[] ary = {4,3,6,8,7,5,2,1};
+/*        int number = 8; //1<= n <= 100,000
+        int[] ary = {4,3,6,8,7,5,2,1};*/
 
-//        int number = 5; //1<= n <= 100,000
-//        int[] ary = {1,2,5,3,4};
+        int number = 5; //1<= n <= 100,000
+        int[] ary = {1,2,5,3,4};
 
         StringBuffer sb = new StringBuffer();
         int aryIdx = 0;
@@ -35,7 +35,9 @@ public class Problem03_5 {
         int i = 1;
         int stackIdx = -1;
         String result = "nob";
+        boolean fail = false;
         while( n <= number){
+            //ary[aryIdx] < stack.get(stackIdx) 의 경우는 발생하면 에러
             if(stackIdx == -1 || ary[aryIdx] >= stack.get(stackIdx)){
                 stack.push(n);
                 sb.append("+");
@@ -45,19 +47,28 @@ public class Problem03_5 {
                     sb.append("-");
                     stackIdx--;
                     aryIdx++;
+
+                    if(stackIdx > -1 && ary[aryIdx] < stack.get(stackIdx)){
+                        fail = true;
+                        break;
+                    }
                 }
+            }else{
+                fail = true;
+                break;
             }
+            if(fail) break;
             n++;
+
         }
-
-        if(stackIdx == -1){
-            result = sb.toString();
-        }
-
-        System.out.println("result = " + result);
+       result = sb.toString();
+       System.out.println("result = " + result);
+       System.out.println("fail = " + fail);
 
 
-       // for(int n = 1 ; n <= 8 ; n++){
+
+
+        // for(int n = 1 ; n <= 8 ; n++){
         /*while(n <= ary[aryIdx]){
 
             stack.push(n);
