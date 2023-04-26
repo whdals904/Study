@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Problem7 {
+public class Problem07 {
 
     int M = 0;
     int N = 0;
     ArrayList<Integer> ary;
     int[] ary1;
 
-    public Problem7(){
+    public Problem07(){
         this.M = 6;
         this.N = 9;
        // this.ary = new ArrayList<Integer>(Arrays.asList(2,7,4,1,5,3));
         ary1 = new int[]{2,7,4,1,5,3};
     }
-    public Problem7(int M, int N, int[] ary){
+    public Problem07(int M, int N, int[] ary){
 /*        Scanner sc = new Scanner(System.in);
         input = Integer.parseInt(sc.nextLine());
         System.out.println("input = " + input);*/
@@ -67,7 +67,7 @@ public class Problem7 {
     }
 
     public static void main(String[] args) {
-        Problem7 p = new Problem7();
+        Problem07 p = new Problem07();
 
         p.my();
         System.out.println("===================================");

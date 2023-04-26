@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class Problem9 {
+public class Problem09 {
     //int S = 4;    int P = 2;    char[] ary ={'A','C','G','T'};     int[] inputCnt ={1,0,0,1};     String inputString ="GATA";
     //int S = 9;    int P = 8;    char[] ary ={'A','C','G','T'};     int[] inputCnt ={2,0,1,1};     String inputString ="CCTGGATTG";
     int S = 9;    int P = 4;    char[] ary;     int[] inputCnt ={0,0,2,2};     String inputString ="CCTGGATSTAGATTGGTTGGTG";
@@ -70,7 +69,7 @@ public class Problem9 {
         System.out.println("[answer] total = " + totalLoopCnt + ", answer : " + count + ", time(ms) : " + (end-start));
     }
 
-    public Problem9(String title){
+    public Problem09(String title){
         System.out.println("====================================");
         System.out.println(title);
         System.out.println("====================================");
@@ -78,7 +77,7 @@ public class Problem9 {
     }
 
     public static void main(String[] args) {
-        Problem9 p = new Problem9("DNS 비밀번호");
+        Problem09 p = new Problem09("DNS 비밀번호");
         p.my();
         p.answer();
     }
