@@ -3,7 +3,7 @@ package jm.study.book.doit알고리즘코딩테스트자바;
 
 import java.util.Stack;
 
-public class Problem13_cardgame {
+public class Problem11 {
     public void answer(){
         long start = System.currentTimeMillis();
         Integer totalLoopCnt = 0;
@@ -85,14 +85,14 @@ public class Problem13_cardgame {
         System.out.println("[answer] total = " + totalLoopCnt + ", answer : " + count + ", time(ms) : " + (end-start));
     }
 
-    public Problem13_cardgame(String title){
+    public Problem11(String title){
         System.out.println("====================================");
         System.out.println(title);
         System.out.println("====================================");
     }
 
     public static void main(String[] args) {
-        Problem13_cardgame p = new Problem13_cardgame("스택과 큐");
+        Problem11 p = new Problem11("스택과 큐");
         p.my();
         p.answer();
     }
