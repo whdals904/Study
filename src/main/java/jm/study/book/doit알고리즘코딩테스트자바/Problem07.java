@@ -2,12 +2,13 @@ package jm.study.book.doit알고리즘코딩테스트자바;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Problem07 {
 
     int M = 0;
     int N = 0;
-    ArrayList<Integer> ary;
+    List<Integer> ary;
     int[] ary1;
 
     public Problem07(){
@@ -15,6 +16,7 @@ public class Problem07 {
         this.N = 9;
        // this.ary = new ArrayList<Integer>(Arrays.asList(2,7,4,1,5,3));
         ary1 = new int[]{2,7,4,1,5,3};
+        ary = Arrays.asList(2,7,4,1,5,3);
     }
     public Problem07(int M, int N, int[] ary){
 /*        Scanner sc = new Scanner(System.in);
