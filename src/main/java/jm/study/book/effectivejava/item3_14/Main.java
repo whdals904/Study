@@ -23,11 +23,10 @@ class ComparebleImpl implements Comparable<ComparebleImpl> {
 
     @Override
     public int compareTo(ComparebleImpl p) {
-        if(p.getAge() < this.age) return -1;
-        if(p.getAge() > this.age) return 0;
+        if(this.age > p.getAge()) return 1;
+        if(this.age < p.getAge()) return -1;
         return 0; // 같다면 0
     }
-
 }
 
 public class Main {
@@ -38,7 +37,6 @@ public class Main {
         ComparebleImpl ci3 = new ComparebleImpl("김아름",38);
 
         ArrayList<ComparebleImpl> list = new ArrayList<>();
-
 
         list.add(ci3);
         list.add(ci1);
