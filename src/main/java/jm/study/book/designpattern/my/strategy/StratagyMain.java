@@ -1,5 +1,9 @@
 package jm.study.book.designpattern.my.strategy;
 
+import java.util.Collections;
+import java.util.Set;
+import java.util.TreeSet;
+
 class Kal implements Weapone{
 
     @Override
@@ -32,5 +36,7 @@ public class StratagyMain {
         sm.attack();
         sm.setWeapone(new Gun());
         sm.attack();
+
+
     }
 }

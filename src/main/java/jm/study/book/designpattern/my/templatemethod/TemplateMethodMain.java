@@ -21,7 +21,7 @@ class TemplateMethodImpl extends TemplateMethod{
 
     @Override
     void Method2() {
-        System.out.println("Method 2 execution !!");
+        System.out.println("Me1thod 2 execution !!");
     }
 
     @Override
