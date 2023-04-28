@@ -22,7 +22,6 @@ class TemplateMethodImpl extends TemplateMethod{
     @Override
     void Method2() {
         System.out.println("Method 2 execution !!");
-
     }
 
     @Override
@@ -36,7 +35,7 @@ public class TemplateMethodMain {
 
     public static void main(String[] args) {
         System.out.println("TemplateMethodMain start !!");
-        TemplateMethodImpl tmi = new TemplateMethodImpl();
+        TemplateMethod tmi = new TemplateMethodImpl();
         tmi.executeMethod();
 
     }
