@@ -21,17 +21,17 @@ class KakaoUser extends User{
 }
 
 abstract class Factory{
-    public abstract User newInstance();
+    public abstract User getInstance();
 }
 class NaverFactory extends Factory{
     @Override
-    public User newInstance() {
+    public User getInstance() {
         return new NaverUser();
     }
 }
 class KakaoFactory extends Factory{
     @Override
-    public User newInstance() {
+    public User getInstance() {
         return new KakaoUser();
     }
 }
@@ -40,11 +40,11 @@ class KakaoFactory extends Factory{
 public class FactoryMethodMain {
     public static void main(String[] args) {
         Factory factory = new KakaoFactory();
-        User user = factory.newInstance();
+        User user = factory.getInstance();
         user.singup();;
 
         factory = new NaverFactory();
-        user = factory.newInstance();
+        user = factory.getInstance();
         user.singup();;
     }
 }
