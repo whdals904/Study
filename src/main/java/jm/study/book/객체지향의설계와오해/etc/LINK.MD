@@ -1,0 +1,1 @@
+https://jupiny.com/2019/01/12/object-orientation-fact-and-misunderstanding/
