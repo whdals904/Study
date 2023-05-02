@@ -10,7 +10,7 @@ public class Menu {
     }
     public MenuItem choose(String name) {
         for (MenuItem each : items) {
-            if (each.equals(name)) {
+            if (each.getName().equals(name)) {
                 return each;
             }
         }
