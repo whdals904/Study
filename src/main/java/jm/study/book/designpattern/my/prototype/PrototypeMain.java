@@ -53,8 +53,5 @@ public class PrototypeMain {
         employees.remove("1황선홍");
         System.out.println("employees = " + employees);
 
-
-
-
     }
 }
