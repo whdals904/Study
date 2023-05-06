@@ -1,7 +1,7 @@
 package jm.study.book.doit알고리즘코딩테스트자바;
 
 
-public class template {
+public class Problem {
     public void answer(){
         long start = System.currentTimeMillis();
         Integer totalLoopCnt = 0;
@@ -24,14 +24,14 @@ public class template {
         System.out.println("[answer] total = " + totalLoopCnt + ", answer : " + count + ", time(ms) : " + (end-start));
     }
 
-    public template(String title){
+    public Problem(String title){
         System.out.println("====================================");
         System.out.println(title);
         System.out.println("====================================");
     }
 
     public static void main(String[] args) {
-        template p = new template("스택과 큐");
+        Problem p = new Problem("스택과 큐");
         p.my();
         p.answer();
     }
