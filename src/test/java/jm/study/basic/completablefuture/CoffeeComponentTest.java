@@ -3,8 +3,10 @@ package jm.study.basic.completablefuture;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -19,6 +21,7 @@ import static org.junit.Assert.assertNull;
 @Slf4j
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes={CoffeeComponent.class,CoffeeRepository.class,TaskConfig.class})
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CoffeeComponentTest {
 
     Executor executor = Executors.newFixedThreadPool(10);
@@ -27,7 +30,7 @@ public class CoffeeComponentTest {
     private CoffeeComponent coffeeComponent;
 
     @Test
-    public void 가격_조회_동기_블록킹_호출_테스트(){
+    public void T1_가격_조회_동기_블록킹_호출_테스트(){
         int expectedPrice =1100;
         int resultPrice = coffeeComponent.getPrice("latte");
         log.info("최종 가격 전달 받음");
@@ -35,7 +38,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_블록킹_호출_테스트(){
+    public void T2_가격_조회_비동기_블록킹_호출_테스트(){
         int expectedPrice =1100;
         CompletableFuture<Integer> future = coffeeComponent.getPriceAsync("latte");
         log.info("아직 최동 데이트를 전달 받지는 않았지만, 다른 작업 수행 가능");
@@ -45,7 +48,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_블록킹_호출_테스트_NEW(){
+    public void T3_가격_조회_비동기_블록킹_호출_테스트_NEW(){
         int expectedPrice =1100;
         CompletableFuture<Integer> future = coffeeComponent.getPriceAsyncNew("latte");
         log.info("아직 최동 데이트를 전달 받지는 않았지만, 다른 작업 수행 가능");
@@ -55,7 +58,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_호출_콜백_반환없음_테스트(){
+    public void T4_가격_조회_비동기_호출_콜백_반환없음_테스트(){
         Integer expectedPrice =1100;
         CompletableFuture<Void> future = coffeeComponent
             .getPriceAsyncNew("latte")
@@ -73,7 +76,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_호출_콜백_반환_테스트(){
+    public void T5_가격_조회_비동기_호출_콜백_반환_테스트(){
         Integer expectedPrice =1100 + 100;
         CompletableFuture<Void> future = coffeeComponent
                 .getPriceAsyncNew("latte")
@@ -94,7 +97,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_호출_콜백_반환_테스트_별도쓰레드(){
+    public void T6_가격_조회_비동기_호출_콜백_반환_테스트_별도쓰레드(){
         Integer expectedPrice =1100 + 100;
         CompletableFuture<Void> future = coffeeComponent
                 .getPriceAsyncNew("latte")
