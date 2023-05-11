@@ -55,7 +55,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_블록킹_호출_콜백_반환없음_테스트(){
+    public void 가격_조회_비동기_호출_콜백_반환없음_테스트(){
         Integer expectedPrice =1100;
         CompletableFuture<Void> future = coffeeComponent
             .getPriceAsyncNew("latte")
@@ -68,7 +68,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_블록킹_호출_콜백_반환_테스트(){
+    public void 가격_조회_비동기_호출_콜백_반환_테스트(){
         Integer expectedPrice =1100 + 100;
         CompletableFuture<Void> future = coffeeComponent
                 .getPriceAsyncNew("latte")
@@ -84,7 +84,7 @@ public class CoffeeComponentTest {
     }
 
     @Test
-    public void 가격_조회_비동기_블록킹_호출_콜백_반환_테스트_별도쓰레드(){
+    public void 가격_조회_비동기_호출_콜백_반환_테스트_별도쓰레드(){
         Integer expectedPrice =1100 + 100;
         CompletableFuture<Void> future = coffeeComponent
                 .getPriceAsyncNew("latte")
