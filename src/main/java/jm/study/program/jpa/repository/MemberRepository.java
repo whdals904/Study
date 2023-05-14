@@ -37,7 +37,7 @@ public class MemberRepository {
 
         return CompletableFuture.supplyAsync(()->{ //여기부터 별도의 스레드
             log.warn ("saveCompatableFutureNew2 =========== " + i);
-            try{Thread.sleep(500);}catch (Exception e){e.printStackTrace();}
+           // try{Thread.sleep(1000);}catch (Exception e){e.printStackTrace();}
             return m.getId();
             }, threadPoolTaskExecutor
         );
