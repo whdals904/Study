@@ -1,6 +1,5 @@
-package jm.study.book.designpattern.my.command;
+package jm.study.book.designpattern.my.command.my;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 

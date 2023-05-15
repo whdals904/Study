@@ -1,4 +1,4 @@
-package jm.study.book.designpattern.my.command;
+package jm.study.book.designpattern.my.command.my;
 
 
 abstract class Command{
