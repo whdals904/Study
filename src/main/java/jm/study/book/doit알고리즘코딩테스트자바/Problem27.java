@@ -1,9 +1,6 @@
 package jm.study.book.doit알고리즘코딩테스트자바;
 
-
-import javax.lang.model.SourceVersion;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class Problem27 {
@@ -17,11 +14,6 @@ public class Problem27 {
 
     static boolean[][] visited;
     public Problem27(){
-/*        ary[0] = new int[]{1,0,1,1,1,1};
-        ary[1] = new int[]{1,0,1,0,1,0};
-        ary[2] = new int[]{1,0,1,0,1,1};
-        ary[3] = new int[]{1,1,1,0,1,1};*/
-
 
     }
 
@@ -34,14 +26,9 @@ public class Problem27 {
         long end = System.currentTimeMillis();
         System.out.println("[my]     total = " + totalLoopCnt + ", answer : " + count + ", time(ms) : " + (end-start));
     }
-
-
     public void my(){
-
-
         BFS(0, 0);
         System.out.println("A[N-1][M-1] = " + A[N-1][M-1]);
-
     }
 
     public static void BFS(int i, int j){
@@ -49,34 +36,26 @@ public class Problem27 {
         Queue<int[]> queue= new LinkedList<>();
         queue.offer(new int[]{i,j});
         visited[i][j] = true;
-            while(!queue.isEmpty()){
+        while(!queue.isEmpty()){
 
-                int now[] = queue.poll();
-                for(int k = 0 ; k < 4 ; k++){
-                    int x = now[0] + dx[k];
-                    int y = now[1] + dy[k];
+            int now[] = queue.poll();
+            for(int k = 0 ; k < 4 ; k++){
+                int x = now[0] + dx[k];
+                int y = now[1] + dy[k];
 
-                    if(x >= 0 && y >= 0 && x<N && y< M){
+                if(x >= 0 && y >= 0 && x < N && y < M){
 
-                        if(A[x][y] != 0 && !visited[x][y])
-                        {
-                           visited[x][y] = true;
-                            A[x][y] = A[now[0]][now[1]] + 1;
-                            System.out.println("x,y = " +x + "," + y);
-
-                            queue.add(new int[]{x,y});
-                        }
-
+                    if(A[x][y] != 0 && !visited[x][y])
+                    {
+                       visited[x][y] = true;
+                        A[x][y] = A[now[0]][now[1]] + 1;
+                        System.out.println("A[x][y] : " +A[x][y] + " | x,y = " +x + "," + y);
+                        queue.add(new int[]{x,y});
                     }
-
-
                 }
-
-
-
             }
+        }
     }
-
 
     public Problem27(String title){
         System.out.println("====================================");
