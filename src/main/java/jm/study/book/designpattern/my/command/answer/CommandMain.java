@@ -48,7 +48,7 @@ class AlarmStartCommand implements Command{
     }
 }
 
-class CommainMain {
+class CommandMain {
     public static void main(String[] args) {
         Lamp lamp = new Lamp();
         Command lampOnCommand = new LampOnCommand(lamp);
