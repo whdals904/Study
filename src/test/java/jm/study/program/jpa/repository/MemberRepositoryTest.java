@@ -6,6 +6,7 @@ import jm.study.program.jpa.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -40,6 +41,7 @@ class MemberRepositoryTest {
     List<Member> list = new ArrayList<>();
 
     @Test
+    @DisplayName("멤버저장하는 테스트")
     public void 멤버저장() throws Exception {
         //given
         Member m = new Member();
