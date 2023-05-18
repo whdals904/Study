@@ -1,0 +1,6 @@
+eclipse 검색에서 target 폴더 제외하기.
+https://runas.tistory.com/138
+
+이클립스 사용중에 많이 사용하는 메뉴인 crtl + shift + r (Open Resource) 기능은 target 폴더 내의 파일도 함께 검색해 주기 때문에 결과가 두개로 보이는데 덕분에 타겟쪽 파일을 수정하는 실수를 가끔 하곤 한다.
+그래서 검색결과에서 타겟폴더를 제외하는 방법은, 검색에서 제외하고 싶은 폴더 (지금같은 경우 target) 에서 마우스 오른쪽 팝업.
+Properties > Resource > Attribute 에서 Derived 에 체크해 주는것.
