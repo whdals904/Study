@@ -1,0 +1,12 @@
+static boolean	interrupted()  --> 실행되면 isInterrupted()를 false 로 변경한다.
+static void	sleep(long millis)
+static void	yield()
+
+* Object를 상속받는 함수
+wait
+notify
+
+보통 Synchronized 함수 내부에서
+notify()
+wait()
+사용한다.
