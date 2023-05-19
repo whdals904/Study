@@ -44,6 +44,21 @@ class ThreadE extends Thread{
         }
     }
 }
+
+@Slf4j
+class ThreadZ extends Thread{
+    @Override
+    public void run() {
+        log.error("ThreadZ - Start");
+        for(long i = 0; i < 900000000000L ; i++ ){
+            if(i%9000000000L == 0){
+                log.info("아직 실행중");
+                log.error("Thread.interrupted() : " + Thread.interrupted());
+            }
+        }
+        log.error("ThreadZ - End");
+    }
+}
 @Slf4j
 public class ThreadMain_Interrupt{
     public static void main(String[] args){
@@ -52,11 +67,15 @@ public class ThreadMain_Interrupt{
         Thread tc = new ThreadC();
         Thread td = new ThreadD();
         Thread te = new ThreadE();
-
+        Thread tz = new ThreadZ();
         tc.start();
         td.start();
         te.start();
         tc.interrupt();
+        
+        //Thread.interrupted 테스트
+        tz.start();
+        tz.interrupt();
 
         log.info("======Main End======");
     }

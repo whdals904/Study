@@ -68,6 +68,5 @@ public class ThreadMain_WaitNotify {
 
         threadA.start();
         threadB.start();
-
     }
 }
