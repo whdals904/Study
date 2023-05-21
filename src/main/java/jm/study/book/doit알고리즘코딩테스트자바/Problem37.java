@@ -1,6 +1,8 @@
 package jm.study.book.doit알고리즘코딩테스트자바;
 
 
+import java.util.Arrays;
+
 public class Problem37 {
     public void answer(){
         long start = System.currentTimeMillis();
@@ -33,19 +35,18 @@ public class Problem37 {
                 continue;
             }
             for(int j = i+i ; j <= N ; j = j+ i){
-                System.out.println("j = " + j);
                 answer[j] = 0;
             }
         }
 
         for(int i = M ; i <= N ; i++){
             if(answer[i] != 0){
-                System.out.println("answer[i] = " + answer[i]);
+                System.out.print(answer[i] + ",");
             }
         }
 
         long end = System.currentTimeMillis();
-        System.out.println("time(ms) : " + (end-start));
+
     }
 
 
