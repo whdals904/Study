@@ -10,7 +10,7 @@ class NaverPay extends Pay{
 
     @Override
     public void process(int price) {
-        if(price > 10000){
+        if(price > 3){
             System.out.println(this.name);
         }else{
             nextResp.process(price);
@@ -25,7 +25,6 @@ class NaverPay extends Pay{
 }
 class KakaoPay extends Pay{
 
-
     public KakaoPay(String name) {
         super(name);
     }
@@ -36,7 +35,7 @@ class KakaoPay extends Pay{
     }
     @Override
     public void process(int price) {
-        if(price > 5000){
+        if(price > 2){
             System.out.println(this.name);
         }else{
             nextResp.process(price);
@@ -45,7 +44,6 @@ class KakaoPay extends Pay{
 }
 
 class TossPay extends Pay{
-
 
     public TossPay(String name) {
         super(name);
@@ -58,7 +56,7 @@ class TossPay extends Pay{
 
     @Override
     public void process(int price) {
-        if(price > 20000){
+        if(price > 1){
             System.out.println(this.name);
         }else{
             nextResp.process(price);
@@ -66,17 +64,16 @@ class TossPay extends Pay{
     }
 }
 
-
 public class Main {
     public static void main(String[] args) {
         Pay naverPay = new NaverPay("네이버 페이");
         Pay kakaoPay = new KakaoPay("카카오 페이");
         Pay tossPay = new TossPay("토스 페이");
 
-
         naverPay.setNextResp(kakaoPay);
         kakaoPay.setNextResp(tossPay);
-        naverPay.process(100000);
+        naverPay.process(2);
+        naverPay.process(3);
+        naverPay.process(4);
     }
-
 }
