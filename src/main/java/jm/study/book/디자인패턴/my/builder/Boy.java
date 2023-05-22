@@ -1,6 +1,6 @@
 package jm.study.book.디자인패턴.my.builder;
 
-class Boy{
+public class Boy{
     private String name;
     private String grade;
     private int age;
@@ -23,7 +23,7 @@ class Boy{
                 '}';
     }
 
-    static class Builder{
+    public static class Builder{
         private String name;
         private String grade;
         private int age;
@@ -41,7 +41,7 @@ class Boy{
             return name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }
@@ -50,7 +50,7 @@ class Boy{
             return grade;
         }
 
-        public Builder setGrade(String grade) {
+        public Builder grade(String grade) {
             this.grade = grade;
             return this;
         }
@@ -59,7 +59,7 @@ class Boy{
             return age;
         }
 
-        public Builder setAge(int age) {
+        public Builder age(int age) {
             this.age = age;
             return this;
         }
@@ -73,14 +73,14 @@ class Boy{
             return this;
         }
     }
-}
-
-public class Main1 {
-
     public static void main(String[] args) {
-        Boy.Builder builder = new Boy.Builder("홍익대");
-        Boy boy =  builder.setAge(3).setName("김종민").setGrade("A").Build();
+        Builder builder = new Builder("홍익대");
+        Boy boy =  builder.age(3).name("김종민").grade("A").Build();
         System.out.println("boy = " + boy);
-    //        Boy boy = Boy.Builder.setName("홍길순").setAge(10).setGrade("A").Build();
+
+        Boy boy1 = new Builder("고려대").age(3).name("김종민").grade("A").Build();
+        System.out.println("boy1 = " + boy1);
+        //        Boy boy = Boy.Builder.setName("홍길순").setAge(10).setGrade("A").Build();
     }
 }
+
