@@ -45,7 +45,7 @@
 아이템 34. int 상수 대신 열거 타입을 사용하라
 아이템 35. ordinal 메서드 대신 인스턴스 필드를 사용하라
 아이템 36. 비트 필드 대신 EnumSet을 사용하라
-아이템 37. ordinal 인덱싱 대신 EnumMap을 사용하라
+아이템 37. ordinal 인덱싱 대신 EnumMap을 사용하라 https://jaehun2841.github.io/2019/02/04/effective-java-item37/#ordinal-%EC%9D%84-%EB%B0%B0%EC%97%B4-%EC%9D%B8%EB%8D%B1%EC%8A%A4%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%A0-%EC%95%88%EB%90%9C%EB%8B%A4
 아이템 38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라
 아이템 39. 명명 패턴보다 애너테이션을 사용하라
 아이템 40. @Override 애너테이션을 일관되게 사용하라
