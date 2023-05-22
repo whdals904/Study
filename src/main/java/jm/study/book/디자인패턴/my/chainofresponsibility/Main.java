@@ -8,6 +8,15 @@ class NaverPay extends Pay{
         super(name);
     }
 
+    @Override
+    public void process(int price) {
+        if(price > 10000){
+            System.out.println(this.name);
+        }else{
+            nextResp.process(price);
+        }
+    }
+
     public Pay setNextResp(Pay nextResp) {
         this.nextResp = nextResp;
         return this;
@@ -25,6 +34,14 @@ class KakaoPay extends Pay{
         this.nextResp = nextResp;
         return this;
     }
+    @Override
+    public void process(int price) {
+        if(price > 5000){
+            System.out.println(this.name);
+        }else{
+            nextResp.process(price);
+        }
+    }
 }
 
 class TossPay extends Pay{
@@ -38,6 +55,15 @@ class TossPay extends Pay{
         this.nextResp = nextResp;
         return this;
     }
+
+    @Override
+    public void process(int price) {
+        if(price > 20000){
+            System.out.println(this.name);
+        }else{
+            nextResp.process(price);
+        }
+    }
 }
 
 
@@ -50,7 +76,7 @@ public class Main {
 
         naverPay.setNextResp(kakaoPay);
         kakaoPay.setNextResp(tossPay);
-        naverPay.process();
+        naverPay.process(100000);
     }
 
 }
