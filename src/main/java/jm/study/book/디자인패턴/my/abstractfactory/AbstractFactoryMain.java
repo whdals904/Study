@@ -1,7 +1,4 @@
-package jm.study.book.디자인패턴.my;
-
-import java.util.ArrayList;
-import java.util.List;
+package jm.study.book.디자인패턴.my.abstractfactory;
 
 abstract class IFactory{
     abstract Button createButton();
