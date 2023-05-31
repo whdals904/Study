@@ -58,7 +58,7 @@ public class Problem37 {
     }
 
     public static void main(String[] args) {
-        Problem37 p = new Problem37("스택과 큐");
+        Problem37 p = new Problem37("소수 구하기");
         p.my();
         p.answer();
     }
